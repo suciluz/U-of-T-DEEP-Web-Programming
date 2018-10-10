@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>DEEP 2018 Web </title>
+    <link rel ="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src = "script.js"> </script>
+  </head>
+
+<body>
+  <div class="header">
+    <div class="title"> My Users </div>
+  </div>
+  <div class="panelContainer">
+    <% data.users.forEach( (user) => { %>
+
+
+    <div class="panel">
+      <div class = "name">
+        <%= user.firstName+" "+user.lastName %>
+      </div>
+      <div class="age">
+        <%= user.age %>
+      </div>
+      <div class="city">
+        <%= user.city %>
+      </div>
+      <div class="email">
+        <%= user.email %>
+      </div>
+      <div class="id">
+        <%= user.id %>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+
+  <button onclick="postRequest()"> Click to POST Request </button>
+</body>
+
+</html>
+
+
+
+<!-- <ul>
+  <% data.users.forEach( (user) => { %>
+    <li id="<%=user.id %>"> <%=user.firstName%> </li>
+  <%}) %>
+</ul> -->
